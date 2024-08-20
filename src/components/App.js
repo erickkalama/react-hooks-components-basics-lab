@@ -1,32 +1,20 @@
 import React from "react";
+import blogData from "../data/blog";
+import Header from "./Header";
+import About from "./About";
+import ArticleList from "./ArticleList";
 
-function NavBar() {
-  return (
-    <nav>
-      <a href="#home">I'm a link!</a>
-    </nav>
-  );
-}
-
-function Home() {
-  return (
-    <div id="home">
-      <h1>Home</h1>
-    </div>
-  );
-}
-
-{/* write an <About> component here */}
 
 
 function App() {
   return (
-    <div>
-      <NavBar />
-      {/* add the <Home> component here */}
-      {/* add your <About> component here */}
-    </div>
-  );
+    <div className="App">
+    <Header name={blogData.name} />
+    <About image={blogData.image} about={blogData.about} />
+    <ArticleList posts={blogData.posts} />
+  </div>
+);
 }
-
+ 
 export default App;
+
